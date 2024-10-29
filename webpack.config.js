@@ -20,16 +20,27 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: {
+        loader: 'babel-loader',
+        }
       },
       {
         test: /\.html$/,
-        loader: 'file?name=[name].[ext]',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          }
+        }
       },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      }
     ],
   },
 };

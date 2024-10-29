@@ -1,7 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-  background: #136a8a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #b3e6eb, #6281c9);
   background: linear-gradient(to left, #b3e6eb, #6281c9);
 }
 
@@ -29,13 +26,50 @@ textarea {
 }
 
 strong + small {
-    display: block;
+  display: block;
 }
 
 input[type=checkbox] {
   margin-right: 1em;
-}
-
-div.pull-right a {
   margin-left: 1em;
 }
+
+.bg-danger {
+  background-color: #f1dede !important;
+  color: #b97370;
+}
+
+.bg-warning {
+  background-color: #fbf8e1 !important;
+  color: #9b8350;
+}
+
+.bg-success {
+  background-color: #dff0d6 !important;
+  color: #64905d;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.list-group-item {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  width: 555px;
+  display: flex;
+  align-items: center;
+}
+
+.item span {
+  flex: 1;
+}
+
+
